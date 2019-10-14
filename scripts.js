@@ -1,6 +1,18 @@
-// Enter a description of this program here.
+//Travel calculator that divides distance by average MPH to
+//obtain the time traveled.
 
-/**
- * Write some pseudo code steps here.
- * Use those steps as your `commit` messages (and delete them from here as you complete a step.)
- */
+const calculator = {
+  divide(a, b) {
+    return a / b;
+  }
+};
+
+const form = document.querySelector("form");
+const distance = document.querySelector("#distance");
+const mph = document.querySelector("#mph");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  console.log(calculator.divide(distance.value, mph.value));
+});
