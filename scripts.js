@@ -10,9 +10,10 @@ const calculator = {
 const form = document.querySelector("form");
 const distance = document.querySelector("#distance");
 const mph = document.querySelector("#mph");
+const output = document.querySelector("output");
 
 form.addEventListener("submit", function(event) {
   event.preventDefault();
 
-  console.log(calculator.divide(distance.value, mph.value));
+  output.textContent = calculator["divide"](distance.value, mph.value);
 });
